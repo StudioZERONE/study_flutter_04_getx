@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_flutter_04_getx/src/pages/normal/first.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -12,7 +13,15 @@ class Home extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [],
+          children: [
+            TextButton(
+              child: const Text('일반적인 라우트'),
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => const FirstPage()));
+              },
+            ),
+          ],
         ),
       ),
     );
