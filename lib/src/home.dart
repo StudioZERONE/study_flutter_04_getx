@@ -16,11 +16,12 @@ class Home extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextButton(
-              child: const Text('일반적인 라우트'),
+              child: const Text('First Page로 이동'),
               onPressed: () {
                 // Navigator.of(context)
-                //     .push(MaterialPageRoute(builder: (_) => const FirstPage()));
-                Get.to(const FirstPage());
+                //     .push(MaterialPageRoute(builder: (_) => const FirstPage())); // 페이지 이동 (원래 플러터)
+                // Get.to(const FirstPage()); // 페이지 이동 (강좌)
+                Get.to(() => const FirstPage()); // 페이지 이동 (20230227 시점 컴파일러 권고)
               },
             ),
           ],
