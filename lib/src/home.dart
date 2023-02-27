@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:study_flutter_04_getx/src/pages/normal/first.dart';
 
 class Home extends StatelessWidget {
@@ -17,8 +18,9 @@ class Home extends StatelessWidget {
             TextButton(
               child: const Text('일반적인 라우트'),
               onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (_) => const FirstPage()));
+                // Navigator.of(context)
+                //     .push(MaterialPageRoute(builder: (_) => const FirstPage()));
+                Get.to(const FirstPage());
               },
             ),
           ],
