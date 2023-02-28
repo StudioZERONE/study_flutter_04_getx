@@ -24,6 +24,12 @@ class Home extends StatelessWidget {
                 Get.to(() => const FirstPage()); // 페이지 이동 (20230227 시점 컴파일러 권고)
               },
             ),
+            TextButton(
+              child: const Text('First Named Page로 이동'),
+              onPressed: () {
+                Get.toNamed("/firstnamed");
+              },
+            ),
           ],
         ),
       ),

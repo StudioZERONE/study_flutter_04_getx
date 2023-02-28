@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:study_flutter_04_getx/src/home.dart';
 import 'package:study_flutter_04_getx/src/pages/normal/first.dart';
+import 'package:study_flutter_04_getx/src/pages/normal/firstNamed.dart';
 import 'package:study_flutter_04_getx/src/pages/normal/second.dart';
+import 'package:study_flutter_04_getx/src/pages/normal/secondNamed.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,7 +37,9 @@ class MyApp extends StatelessWidget {
             name: "/",
             page: () => const Home()), // 이걸 넣으면 위의 home: const Home(), 을 빼야 함
         GetPage(name: "/first", page: () => const FirstPage()),
+        GetPage(name: "/firstnamed", page: () => const FirstNamedPage()),
         GetPage(name: "/second", page: () => const SecondPage()),
+        GetPage(name: "/secondnamed", page: () => const SecondNamedPage()),
       ],
     );
   }
