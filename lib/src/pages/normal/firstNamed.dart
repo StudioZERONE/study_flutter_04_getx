@@ -14,6 +14,7 @@ class FirstNamedPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text("${Get.arguments}"), //arguments 전달받아 화면에 표시
             TextButton(
               child: const Text('Second Named Page로 이동'),
               onPressed: () {

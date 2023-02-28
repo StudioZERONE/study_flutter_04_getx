@@ -40,7 +40,10 @@ class MyApp extends StatelessWidget {
             name: "/first",
             page: () => const FirstPage(),
             transition: Transition.zoom), // 페이지 전환에 줌 효과를 넣는 기능인데.. 안 되네..
-        GetPage(name: "/firstnamed", page: () => const FirstNamedPage()),
+        GetPage(
+          name: "/firstnamed",
+          page: () => const FirstNamedPage(),
+        ),
         GetPage(
             name: "/second",
             page: () => const SecondPage(),
