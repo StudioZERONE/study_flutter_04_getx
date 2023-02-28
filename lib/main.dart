@@ -36,9 +36,15 @@ class MyApp extends StatelessWidget {
         GetPage(
             name: "/",
             page: () => const Home()), // 이걸 넣으면 위의 home: const Home(), 을 빼야 함
-        GetPage(name: "/first", page: () => const FirstPage()),
+        GetPage(
+            name: "/first",
+            page: () => const FirstPage(),
+            transition: Transition.zoom), // 페이지 전환에 줌 효과를 넣는 기능인데.. 안 되네..
         GetPage(name: "/firstnamed", page: () => const FirstNamedPage()),
-        GetPage(name: "/second", page: () => const SecondPage()),
+        GetPage(
+            name: "/second",
+            page: () => const SecondPage(),
+            transition: Transition.zoom), // 페이지 전환에 줌 효과를 넣는 기능인데.. 안 되네..
         GetPage(name: "/secondnamed", page: () => const SecondNamedPage()),
       ],
     );
