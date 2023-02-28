@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:study_flutter_04_getx/src/home.dart';
+import 'package:study_flutter_04_getx/src/pages/normal/first.dart';
+import 'package:study_flutter_04_getx/src/pages/normal/second.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +20,23 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const Home(),
+      // 라우트 세팅 ---------------------------------
+      // home: const Home(),
+      initialRoute: "/",
+      // 라우트 세팅: 기존 방식
+      // routes: {
+      //   "/": (context) => const Home(), // 이걸 넣으면 위의 home: const Home(), 을 빼야 함
+      //   "/first": (context) => const FirstPage(),
+      //   "/second": (context) => const SecondPage(),
+      // },
+      // 라우트 세팅: 강좌에서의 GetX 방식
+      getPages: [
+        GetPage(
+            name: "/",
+            page: () => const Home()), // 이걸 넣으면 위의 home: const Home(), 을 빼야 함
+        GetPage(name: "/first", page: () => const FirstPage()),
+        GetPage(name: "/second", page: () => const SecondPage()),
+      ],
     );
   }
 }
