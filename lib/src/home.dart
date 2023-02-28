@@ -27,7 +27,11 @@ class Home extends StatelessWidget {
             TextButton(
               child: const Text('First Named Page로 이동'),
               onPressed: () {
-                Get.toNamed("/firstnamed", arguments: "ZERONE"); //arguments 전달
+                //Get.toNamed("/firstnamed", arguments: "ZERONE"); //arguments 전달
+                Get.toNamed("/firstnamed", arguments: {
+                  "name": "ZERONE",
+                  "age": 22,
+                }); //arguments 전달
               },
             ),
           ],
