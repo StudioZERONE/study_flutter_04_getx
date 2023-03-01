@@ -15,9 +15,15 @@ class FirstNamedPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("${Get.arguments}"), //arguments 전달받아 화면에 표시
+            const SizedBox(
+              height: 5,
+            ),
             Text(
               "${Get.arguments['name']} : ${Get.arguments['age'].toString()}",
             ), //arguments 전달받아 화면에 표시
+            const SizedBox(
+              height: 5,
+            ),
             FilledButton(
               child: const Text('Second Named Page로 이동'),
               onPressed: () {
