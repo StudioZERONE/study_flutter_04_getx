@@ -18,13 +18,16 @@ class FirstNamedPage extends StatelessWidget {
             Text(
               "${Get.arguments['name']} : ${Get.arguments['age'].toString()}",
             ), //arguments 전달받아 화면에 표시
-            TextButton(
+            FilledButton(
               child: const Text('Second Named Page로 이동'),
               onPressed: () {
                 Get.offNamed(
                     "/secondnamed"); // 자신(페이지)의 히스토리를 지우면서 이동, 이렇게 간 페이지에서 뒤로가기 버튼을 누르면 홈으로 이동하게 됨
                 // Get.offAllNamed("/secondnamed"); // 모든 히스토리를 지우면서 이동, 이렇게 간 페이지에서 뒤로가기 버튼을 누르면 홈으로 이동하게 됨
               },
+            ),
+            const SizedBox(
+              height: 5,
             ),
           ],
         ),

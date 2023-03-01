@@ -15,13 +15,16 @@ class FirstPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextButton(
+            FilledButton(
               child: const Text('Second Page로 이동'),
               onPressed: () {
                 // Get.to(const SecondPage()); // 페이지 이동 (강좌)
                 Get.to(
                     () => const SecondPage()); // 페이지 이동 (20230227 시점 컴파일러 권고)
               },
+            ),
+            const SizedBox(
+              height: 5,
             ),
           ],
         ),

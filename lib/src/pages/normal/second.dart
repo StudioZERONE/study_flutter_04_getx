@@ -15,14 +15,17 @@ class SecondPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextButton(
+            FilledButton(
               child: const Text('뒤로 이동'),
               onPressed: () {
                 Get.back();
                 // Navigator.of(context).pop();
               },
             ),
-            TextButton(
+            const SizedBox(
+              height: 5,
+            ),
+            FilledButton(
               child: const Text('홈으로 이동'),
               onPressed: () {
                 // Get.to(const Home()); // 페이지 이동 (강좌)
@@ -34,6 +37,9 @@ class SecondPage extends StatelessWidget {
                 Get.offAll(
                     () => const Home()); //이동 히스토리를 모두 지운다 (20230227 시점 컴파일러 권고)
               },
+            ),
+            const SizedBox(
+              height: 5,
             ),
           ],
         ),

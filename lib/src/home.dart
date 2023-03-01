@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextButton(
+            FilledButton(
               child: const Text('First Page로 이동'),
               onPressed: () {
                 // Navigator.of(context)
@@ -24,7 +24,10 @@ class Home extends StatelessWidget {
                 Get.to(() => const FirstPage()); // 페이지 이동 (20230227 시점 컴파일러 권고)
               },
             ),
-            TextButton(
+            const SizedBox(
+              height: 5,
+            ),
+            FilledButton(
               child: const Text('First Named Page로 이동'),
               onPressed: () {
                 //Get.toNamed("/firstnamed", arguments: "ZERONE"); //arguments 전달
@@ -33,6 +36,16 @@ class Home extends StatelessWidget {
                   "age": 22,
                 }); //arguments 전달
               },
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            FilledButton(
+              onPressed: (() => const FirstPage()),
+              child: const Text("단순 상태관리"),
+            ),
+            const SizedBox(
+              height: 5,
             ),
           ],
         ),

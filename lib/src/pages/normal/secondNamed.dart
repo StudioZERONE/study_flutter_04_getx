@@ -15,18 +15,24 @@ class SecondNamedPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextButton(
+            FilledButton(
               child: const Text('뒤로 이동'),
               onPressed: () {
                 Get.back();
               },
             ),
-            TextButton(
+            const SizedBox(
+              height: 5,
+            ),
+            FilledButton(
               child: const Text('홈으로 이동'),
               onPressed: () {
                 Get.to(() => const Home());
                 Get.offAll(() => const Home());
               },
+            ),
+            const SizedBox(
+              height: 5,
             ),
           ],
         ),
