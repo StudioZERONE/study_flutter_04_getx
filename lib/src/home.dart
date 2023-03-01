@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:study_flutter_04_getx/src/pages/normal/first.dart';
+import 'package:study_flutter_04_getx/src/pages/simple_state_manage_page.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -41,8 +42,10 @@ class Home extends StatelessWidget {
               height: 5,
             ),
             FilledButton(
-              onPressed: (() => const FirstPage()),
-              child: const Text("단순 상태관리"),
+              onPressed: () {
+                Get.to(() => const SimpleStateManagePage());
+              },
+              child: const Text("단순상태관리"),
             ),
             const SizedBox(
               height: 5,
