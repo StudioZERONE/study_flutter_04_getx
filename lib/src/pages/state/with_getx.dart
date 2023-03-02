@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:study_flutter_04_getx/src/controller/count_controller_with_getx.dart';
 
 class WithGetX extends StatelessWidget {
   const WithGetX({super.key});
@@ -14,22 +15,19 @@ class WithGetX extends StatelessWidget {
           const SizedBox(
             height: 5,
           ),
-          const Text(
-            "0",
-            style: TextStyle(
-              fontSize: 50,
-            ),
-          ),
+          GetBuilder<CountControllerWithGetX>(builder: (controller) {
+            return Text(
+              "${controller.count}",
+              style: const TextStyle(fontSize: 50),
+            );
+          }),
           const SizedBox(
             height: 5,
           ),
           FilledButton(
             child: const Text('+'),
             onPressed: () {
-              //Get.toNamed("/firstnamed", arguments: "ZERONE"); //arguments 전달
-              Get.toNamed(
-                "/firstnamed",
-              ); //arguments 전달
+              Get.find<CountControllerWithGetX>().increase();
             },
           ),
         ],
