@@ -19,6 +19,7 @@ class CountControllerWithReactive extends GetxController {
   Rx<NUM> nums = NUM.FIRST.obs;
   //Rx<User> user = User().obs;
   Rx<User> user = User(name: "ZERONE", age: 20).obs;
+  RxList<String> list = [""].obs;
 
   void increase() {
     count++;
@@ -28,6 +29,8 @@ class CountControllerWithReactive extends GetxController {
     user.update((val) {
       val!.name = "ZZerone";
     });
+
+    list.addIf(user.value.name == "ZERONE", "OK");
   }
 
   void puNumber(int value) {
