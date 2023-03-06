@@ -2,6 +2,9 @@ import 'package:get/get.dart';
 
 class CountControllerWithReactive extends GetxController {
   RxInt count = 0.obs;
+  RxDouble dbl = 0.0.obs;
+  RxString value = "".obs;
+
   void increase() {
     count++;
   }
