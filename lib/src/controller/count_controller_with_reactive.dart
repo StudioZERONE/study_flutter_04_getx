@@ -1,9 +1,12 @@
 import 'package:get/get.dart';
 
+enum NUM { FIRST, SECOND }
+
 class CountControllerWithReactive extends GetxController {
   RxInt count = 0.obs;
   RxDouble dbl = 0.0.obs;
   RxString value = "".obs;
+  Rx<NUM> nums = NUM.FIRST.obs;
 
   void increase() {
     count++;
