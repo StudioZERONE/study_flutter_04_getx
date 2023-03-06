@@ -2,14 +2,32 @@ import 'package:get/get.dart';
 
 enum NUM { FIRST, SECOND }
 
+class User {
+  String name;
+  int age;
+
+  User({
+    required this.name,
+    required this.age,
+  });
+}
+
 class CountControllerWithReactive extends GetxController {
   RxInt count = 0.obs;
   RxDouble dbl = 0.0.obs;
   RxString value = "".obs;
   Rx<NUM> nums = NUM.FIRST.obs;
+  //Rx<User> user = User().obs;
+  Rx<User> user = User(name: "ZERONE", age: 20).obs;
 
   void increase() {
     count++;
+
+    nums(NUM.SECOND);
+
+    user.update((val) {
+      val!.name = "ZZerone";
+    });
   }
 
   void puNumber(int value) {
