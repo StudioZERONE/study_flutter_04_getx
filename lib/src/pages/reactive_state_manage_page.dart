@@ -35,6 +35,17 @@ class ReactiveStateManagePage extends StatelessWidget {
                 Get.find<CountControllerWithReactive>().increase();
               },
             ),
+            const SizedBox(
+              height: 5,
+            ),
+            //GetX는 값이 바뀌어야 update가 일어남.
+            //provider는 값을 바꾸려고 하면 update가 일어남.. 굿!
+            FilledButton(
+              child: const Text('5로 변경'),
+              onPressed: () {
+                Get.find<CountControllerWithReactive>().puNumber(5);
+              },
+            ),
           ],
         ),
       ),
