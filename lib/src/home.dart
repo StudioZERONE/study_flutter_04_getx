@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:study_flutter_04_getx/src/pages/dependency/dependency_manage_page.dart';
 import 'package:study_flutter_04_getx/src/pages/normal/first.dart';
 import 'package:study_flutter_04_getx/src/pages/reactive_state_manage_page.dart';
 import 'package:study_flutter_04_getx/src/pages/simple_state_manage_page.dart';
@@ -46,7 +47,7 @@ class Home extends StatelessWidget {
               onPressed: () {
                 Get.to(() => const SimpleStateManagePage());
               },
-              child: const Text("단순상태관리"),
+              child: const Text("단순 상태 관리"),
             ),
             const SizedBox(
               height: 5,
@@ -55,7 +56,16 @@ class Home extends StatelessWidget {
               onPressed: () {
                 Get.to(() => const ReactiveStateManagePage());
               },
-              child: const Text("반응형상태관리"),
+              child: const Text("반응형 상태 관리"),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            FilledButton(
+              onPressed: () {
+                Get.to(() => const DependencyManagePage());
+              },
+              child: const Text("의존성 관리"),
             ),
             const SizedBox(
               height: 5,
