@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:study_flutter_04_getx/src/controller/dependency_controller.dart';
+import 'package:study_flutter_04_getx/src/pages/dependency/get_lazyput.dart';
 import 'package:study_flutter_04_getx/src/pages/dependency/get_put.dart';
 
 class DependencyManagePage extends StatelessWidget {
@@ -17,10 +18,10 @@ class DependencyManagePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             FilledButton(
-              child: const Text("GetPut"),
+              child: const Text("Get.put"),
               onPressed: () {
                 Get.to(
-                  const GetPut(),
+                  () => const GetPut(),
                   binding: BindingsBuilder(() {
                     Get.put(DependencyController());
                   }),
@@ -31,8 +32,16 @@ class DependencyManagePage extends StatelessWidget {
               height: 5,
             ),
             FilledButton(
-              child: const Text(""),
-              onPressed: () {},
+              child: const Text("Get.lazyPut"),
+              onPressed: () {
+                Get.to(
+                  () => const GetLazyPut(),
+                  binding: BindingsBuilder(() {
+                    Get.lazyPut<DependencyController>(
+                        () => DependencyController());
+                  }),
+                );
+              },
             ),
             const SizedBox(
               height: 5,

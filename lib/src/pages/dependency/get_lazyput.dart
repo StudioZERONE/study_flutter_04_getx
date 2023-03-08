@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:study_flutter_04_getx/src/controller/dependency_controller.dart';
 
-class GetPut extends StatelessWidget {
-  const GetPut({super.key});
+class GetLazyPut extends StatelessWidget {
+  const GetLazyPut({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Get.put"),
+        title: const Text("Get.lazyPut"),
       ),
       body: Center(
         child: Column(
@@ -24,19 +24,23 @@ class GetPut extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            const Text("DependencyManagePage에서 Get.put을 사용하게 되면 들어오는 페이지"),
+            const Text("DependencyManagePage에서 Get.lazyput을 사용하게 되면 들어오는 페이지"),
             const SizedBox(
               height: 30,
             ),
-            const Text("이 페이지에 들어오면, (페이지에 접근하면)"),
+            const Text("이 페이지에 들어와도"),
             const SizedBox(
               height: 5,
             ),
-            const Text("즉시 GetxController를 상속받은 DependencyController를 생성하고,"),
+            const Text("GetxController를 상속받은 DependencyController는 생성하지 않고,"),
             const SizedBox(
               height: 5,
             ),
-            const Text("버튼을 누르면 별도의 인스턴스를 생성하지 않음"),
+            const Text("(메모리에 올리지 않는다는 얘기)"),
+            const SizedBox(
+              height: 5,
+            ),
+            const Text("버튼을 눌러야 DependencyController를 생성하게 됨"),
             const SizedBox(
               height: 5,
             ),
