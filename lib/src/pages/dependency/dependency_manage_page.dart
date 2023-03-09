@@ -47,15 +47,33 @@ class DependencyManagePage extends StatelessWidget {
               height: 5,
             ),
             FilledButton(
-              child: const Text(""),
-              onPressed: () {},
+              child: const Text("Get.putAsync"),
+              onPressed: () {
+                Get.to(
+                  () => const GetPut(),
+                  binding: BindingsBuilder(() {
+                    Get.putAsync<DependencyController>(() async {
+                      await Future.delayed(const Duration(seconds: 5));
+                      return DependencyController();
+                    });
+                  }),
+                );
+              },
             ),
             const SizedBox(
               height: 5,
             ),
             FilledButton(
-              child: const Text(""),
-              onPressed: () {},
+              child: const Text("Get.create"),
+              onPressed: () {
+                Get.to(
+                  () => const GetPut(),
+                  binding: BindingsBuilder(() {
+                    Get.create<DependencyController>(
+                        () => DependencyController());
+                  }),
+                );
+              },
             ),
           ],
         ),

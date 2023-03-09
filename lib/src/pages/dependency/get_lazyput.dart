@@ -16,7 +16,7 @@ class GetLazyPut extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             FilledButton(
-              child: const Text("test"),
+              child: const Text("increase test"),
               onPressed: () {
                 Get.find<DependencyController>().increase();
               },
