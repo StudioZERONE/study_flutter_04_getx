@@ -52,7 +52,7 @@ class Home extends StatelessWidget {
             const SizedBox(
               height: 5,
             ),
-            FilledButton(
+            ElevatedButton(
               onPressed: () {
                 Get.to(() => const ReactiveStateManagePage());
               },
@@ -61,7 +61,7 @@ class Home extends StatelessWidget {
             const SizedBox(
               height: 5,
             ),
-            FilledButton(
+            ElevatedButton(
               onPressed: () {
                 Get.to(() => const DependencyManagePage());
               },

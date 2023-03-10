@@ -63,7 +63,7 @@ class DependencyManagePage extends StatelessWidget {
             const SizedBox(
               height: 5,
             ),
-            FilledButton(
+            ElevatedButton(
               child: const Text("Get.create"),
               onPressed: () {
                 Get.to(
